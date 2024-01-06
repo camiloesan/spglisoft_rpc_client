@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.spglisoft_rpc_client.controladores.FXMLLoginController">
+   <children>
+      <HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #272727;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="Iniciar Sesión" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets left="33.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="350.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="190.0" text="Matrícula o num. personal:" />
+            <TextField fx:id="tfEmail" depthTest="ENABLE" prefHeight="25.0" prefWidth="190.0" />
+            <Label prefHeight="17.0" prefWidth="190.0" text="Contraseña: " />
+            <PasswordField fx:id="tfPassword" onAction="#btnLogin" prefHeight="25.0" prefWidth="190.0" />
+            <Button fx:id="buttonContinue" mnemonicParsing="false" onAction="#btnLogin" text="Continuar">
+               <VBox.margin>
+                  <Insets left="115.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>

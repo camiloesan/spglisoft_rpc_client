@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.spglisoft_rpc_client.controladores.FXMLRPCambiosController">
+   <children>
+      <HBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblTitulo" text="Cambios">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <ComboBox fx:id="cbFiltro" onAction="#llenarTablaCambios" prefWidth="150.0" promptText="Seleccionar filtro" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <TableView fx:id="tvCambios" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre del cambio" />
+                        <TableColumn fx:id="colNombreEncargado" prefWidth="75.0" text="Nombre Encargado" />
+                        <TableColumn fx:id="colTipoCambio" prefWidth="75.0" text="Tipo de cambio" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </TableView>
+                  <HBox alignment="TOP_RIGHT" spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnVerDetalleCambio" text="Ver detalle" />
+                        <Button mnemonicParsing="false" onAction="#btnRegresar" text="Regresar" />
+                     </children>
+                     <padding>
+                        <Insets right="100.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

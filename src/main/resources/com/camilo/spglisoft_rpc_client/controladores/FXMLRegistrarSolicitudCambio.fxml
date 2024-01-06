@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="890.0" prefWidth="693.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.spglisoft_rpc_client.controladores.FXMLRegistrarSolicitudCambioController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="693.0" style="-fx-background-color: #18529D;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="680.0">
+               <children>
+                  <Label text="Registrar solicitud de cambio" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="98.0" prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" text="Titulo">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="125.0" prefHeight="27.0" prefWidth="380.0">
+         <children>
+            <TextField fx:id="tfTitulo" prefHeight="25.0" prefWidth="390.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="152.0" prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" text="Descripcion del cambio">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="179.0" prefHeight="130.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="taDescripcionCambio" prefHeight="130.0" prefWidth="600.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="309.0" prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" text="Razon del cambio">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="623.0" prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" text="Impacto del cambio">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="493.0" prefHeight="25.0" prefWidth="200.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="466.0" prefHeight="25.0" prefWidth="200.0">
+         <children>
+            <Label alignment="BOTTOM_CENTER" text="Accion propuesta">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="14.0" layoutY="493.0" prefHeight="130.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="taAccionPropuesta" prefHeight="130.0" prefWidth="600.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="22.0" layoutY="824.0" prefHeight="27.0" prefWidth="650.0" spacing="20.0">
+         <children>
+            <Button lineSpacing="20.0" mnemonicParsing="false" onAction="#btRegistrarSolicitud" text="Registrar solicitud" />
+            <Button lineSpacing="20.0" mnemonicParsing="false" onAction="#btVolver" text="Volver" />
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="336.0" prefHeight="130.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="taRazonCambio" prefHeight="130.0" prefWidth="600.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="15.0" layoutY="650.0" prefHeight="130.0" prefWidth="600.0">
+         <children>
+            <TextArea fx:id="taImpactoCambio" prefHeight="130.0" prefWidth="600.0" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

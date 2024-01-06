@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.camilo.spglisoft_rpc_client.controladores.FXMLAsignarActividadController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="281.0" layoutY="32.0" prefHeight="600.0" prefWidth="1000.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="lblTitulo" text="Asignar Desarrollador a Actividad">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="25.0" top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <VBox prefHeight="350.0" prefWidth="950.0" spacing="15.0">
+               <children>
+                  <Label text="Desarrolladores disponibles" />
+                  <TableView fx:id="tvDesarrolladores" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <columns>
+                      <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+                      <TableColumn fx:id="colApellidoPaterno" prefWidth="75.0" text="Apellido Paterno" />
+                        <TableColumn fx:id="colApellidoMaterno" prefWidth="75.0" text="Apellido Materno" />
+                        <TableColumn fx:id="colMatricula" prefWidth="75.0" text="Matrícula" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btnAsignarActividad" text="Asignar" />
+                  <Button mnemonicParsing="false" onAction="#btnCancelar" text="Cancelar" />
+               </children>
+               <padding>
+                  <Insets right="100.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
