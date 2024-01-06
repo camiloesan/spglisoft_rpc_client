@@ -136,28 +136,6 @@ public class SolicitudCambioDAO {
         }
         return solicitudes;
     }
-    
-    public static String obtenerSolicitante(int idSolicitante) throws SQLException{
-        Connection conexionBD = ConexionBD.obtenerConnection();
-        String nombreSolicitante = null;
-        if (conexionBD != null) {
-            try {
-                String consulta = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) AS nombre_completo "
-                        + "FROM usuarios WHERE id_usuario = ?";
-                PreparedStatement obtenerSolicitante = conexionBD.prepareStatement(consulta);
-                obtenerSolicitante.setInt(1, idSolicitante);
-                ResultSet resultado = obtenerSolicitante.executeQuery();
-                if (resultado.next()) {
-                    nombreSolicitante = resultado.getString("nombre_completo");
-                }
-            } catch (SQLException e) {
-                throw e;
-            } finally {
-                conexionBD.close();
-            }
-        }
-        return nombreSolicitante;
-    }
 
     public static List<EstadoSolicitud> obtenerEstadosSolicitud() {
         List<EstadoSolicitud> listaEstadosSolicitud = new ArrayList<>();

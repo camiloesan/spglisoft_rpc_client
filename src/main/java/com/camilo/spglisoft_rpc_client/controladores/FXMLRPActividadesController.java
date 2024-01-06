@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package com.camilo.spglisoft_rpc_client.controladores;
 
 import java.io.IOException;
@@ -35,12 +31,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import com.camilo.spglisoft_rpc_client.utils.Utilidades;
 
-/*
- * Creador: Camilo Espejo Sánchez.
- * Fecha de creación: Dec 14, 2023.
- * Descripción: Recupera las actividades propias del desarrollador con la
- * sesion actual.
- */
 public class FXMLRPActividadesController implements Initializable, ISidebarRPButtons {
     @FXML
     private TableView<Actividad> tvActividades;
@@ -65,9 +55,9 @@ public class FXMLRPActividadesController implements Initializable, ISidebarRPBut
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         formatearTabla();
-        formatearComboFiltro();
-        cbSeleccionFiltro();
-        llenarTablaActividades();
+        //formatearComboFiltro();
+        //cbSeleccionFiltro();
+        //llenarTablaActividades();
     }
 
     public void formatearComboFiltro() {

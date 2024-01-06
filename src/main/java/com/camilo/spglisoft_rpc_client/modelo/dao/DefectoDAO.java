@@ -21,7 +21,6 @@ import com.camilo.spglisoft_rpc_client.modelo.ResultadoOperacion;
  * @author lecap
  */
 public class DefectoDAO {
-    
     public static ResultadoOperacion registrarNuevoDefecto(Defecto defecto) throws SQLException {
         ResultadoOperacion resultado = new ResultadoOperacion(true, "Error al registrar el defecto", -1);
         Connection conexionBD = ConexionBD.obtenerConnection();

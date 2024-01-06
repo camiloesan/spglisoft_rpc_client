@@ -23,7 +23,7 @@ public class SingletonLogin {
 
     private int idProyectoActual;
     private String tipoUsuario;
-    private Proyecto proyectoActual;
+    private Spglisoft.ProjectInfo proyectoActual;
     
     public static SingletonLogin getInstance() {
         if (instance == null) {
@@ -48,7 +48,7 @@ public class SingletonLogin {
         this.projectManager = projectManager;
     }
 
-    public Proyecto getProyectoActual() {
+    public Spglisoft.ProjectInfo getProyectoActual() {
         return proyectoActual;
     }
 
@@ -60,7 +60,7 @@ public class SingletonLogin {
         this.tipoUsuario = tipoUsuario;
     }
 
-    public void setProyectoActual(Proyecto proyectoActual) {
+    public void setProyectoActual(Spglisoft.ProjectInfo proyectoActual) {
         this.proyectoActual = proyectoActual;
     }
 

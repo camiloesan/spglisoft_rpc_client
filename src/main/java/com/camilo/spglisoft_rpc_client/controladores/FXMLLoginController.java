@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package com.camilo.spglisoft_rpc_client.controladores;
 
 import io.grpc.Grpc;
@@ -21,14 +17,6 @@ import java.util.concurrent.TimeUnit;
 import javafx.scene.control.Alert;
 import com.camilo.spglisoft_rpc_client.utils.Utilidades;
 import spglisoft.Spglisoft;
-
-/*
- * Creador: Camilo Espejo Sánchez.
- * Fecha de creación: Dec 14, 2023.
- * Descripción: Hace el despacho del inicio de sesion,
- * discrimina entre desarrollador o representante para despues
- * redirigir a la pantalla correspondiente.
- */
 
 public class FXMLLoginController {
 
@@ -71,7 +59,6 @@ public class FXMLLoginController {
                         SingletonLogin singletonLogin = SingletonLogin.getInstance();
                         singletonLogin.setDeveloper(developer);
                         singletonLogin.setTipoUsuario(Constantes.USUARIO_DESARROLLADOR);
-                        Utilidades.mostrarAlertaSimple("Bienvenido", "Bienvenido al SPGLISOFT", Alert.AlertType.INFORMATION);
                         MainStage.changeView("FXMLActividadesDesarrollador.fxml", 1000, 600);
                     } else {
                         Alertas.mostrarAlertaLoginFallido();
@@ -87,7 +74,6 @@ public class FXMLLoginController {
                     try {
                         RpcClient client = new RpcClient(managedChannel);
                         projectManager = client.getProjectManager(usuario, contrasena);
-                        System.out.println(projectManager.getNombre() + " " + projectManager.getIdRepresentante());
                     } finally {
                         managedChannel.shutdownNow().awaitTermination(5, TimeUnit.SECONDS);
                     }
@@ -96,7 +82,6 @@ public class FXMLLoginController {
                         SingletonLogin singletonLogin = SingletonLogin.getInstance();
                         singletonLogin.setProjectManager(projectManager);
                         singletonLogin.setTipoUsuario(Constantes.USUARIO_REPRESENTANTE);
-                        Utilidades.mostrarAlertaSimple("Bienvenido", "Bienvenido al SPGLISOFT", Alert.AlertType.INFORMATION);
                         MainStage.changeView("FXMLRPMenuPrincipal.fxml", 1000, 600);
                     } else {
                         Alertas.mostrarAlertaLoginFallido();

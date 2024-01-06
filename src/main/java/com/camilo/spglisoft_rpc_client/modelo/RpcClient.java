@@ -11,7 +11,7 @@ public class RpcClient {
 
     private final DataManagerGrpc.DataManagerBlockingStub blockingStub;
     private final DataManagerGrpc.DataManagerStub asyncStub;
-    public static final String TARGET = "192.168.1.145:50051";
+    public static final String TARGET = "localhost:50051";
 
     //could make getChannel a singleton
     public RpcClient(Channel channel) {
@@ -114,6 +114,36 @@ public class RpcClient {
         Spglisoft.RowsAffected response = null;
         try {
             response = blockingStub.assignActivity(request);
+        } catch (StatusRuntimeException e) {
+            logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
+        }
+        return response;
+    }
+
+    public Spglisoft.ProjectList getProjectsByManagerId(int idManager) {
+        Spglisoft.ManagerIdRequest request
+                = Spglisoft.ManagerIdRequest
+                .newBuilder()
+                .setIdRepresentante(idManager)
+                .build();
+        Spglisoft.ProjectList response = null;
+        try {
+            response = blockingStub.getProjectsByManager(request);
+        } catch (StatusRuntimeException e) {
+            logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
+        }
+        return response;
+    }
+
+    public Spglisoft.ProjectInfo getProjectByDevId(int idDeveloper) {
+        Spglisoft.DevIdRequest request
+                = Spglisoft.DevIdRequest
+                .newBuilder()
+                .setIdDesarrollador(idDeveloper)
+                .build();
+        Spglisoft.ProjectInfo response = null;
+        try {
+            response = blockingStub.getProjectByDev(request);
         } catch (StatusRuntimeException e) {
             logger.log(Level.WARNING, "RPC failed: {0}", e.getStatus());
         }

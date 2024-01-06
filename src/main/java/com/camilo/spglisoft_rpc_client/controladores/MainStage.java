@@ -8,12 +8,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-/*
- * Creador: Camilo Espejo Sánchez.
- * Fecha de creación: Dec 14, 2023.
- * Descripción: Manejador de escenas y clase principal.
- */
-
 public class MainStage extends Application {
     private static Scene scene;
     

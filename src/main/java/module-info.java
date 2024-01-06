@@ -9,8 +9,7 @@ module com.camilo.spglisoft_rpc_client {
     requires com.google.common;
     requires java.sql;
 
+    opens spglisoft to javafx.base;
     opens com.camilo.spglisoft_rpc_client.controladores to javafx.fxml;
-    opens com.camilo.spglisoft_rpc_client to javafx.fxml;
     exports com.camilo.spglisoft_rpc_client.controladores;
-    exports com.camilo.spglisoft_rpc_client;
 }
